@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM AND ATTRIBUTES</title>
+    <style>
+        fieldset {
+            border-radius: 3px;
+            border:2px dotted rgb(255, 104, 104);
+            background-color: #4a4aff;
+            color: white;
+        }
+        legend {
+            color: black;
+            font-size: 20px;
+        }
+        input[type="range"] {
+            width: 20%;
+            height: 8px;
+            background-color: blue;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration form</h1>
+    <form action="formwork.php" method="post">
+        <fieldset>
+            <legend>Student's origin</legend>
+            <label for="firstName">First Name:</label><br><br>
+            <input type="text" id="firstName" name="firstName" maxlength="30" pattern="[A-Za-z\s]+" placeholder="Name.."  required autofocus><br><br>
+            <label for="Secondname">Last Name:</label><br><br>
+            <input type="text" id="Secondname" maxlength="30" name="lastname" pattern="[A-Za-z\s]+" placeholder="name..."  required><br><br>
+            <label for="age">Age:</label><br><br>
+            <input type="number" name="age" id="age"><br><br>
+            <label for="E-mail">E-mail</label><br><br>
+            <input type="email" name="email" placeholder="example@gmail.com"><br><br>
+            <label for="Gender">Gender</label><br>
+            <input type="radio" name="sex" value="male" id="MALE">Male<br><br>
+            <input type="radio" name="sex" value="female" id="FEMALE">Female<br><br>
+        <label for="language">Spoken languages</label><br><br>
+        <input type="checkbox" name="Ki[]" id="" value="Kinyarwanda">Kinyarwanda<br>
+        <input type="checkbox" name="Ki[]" id="" value="Kiswahili">Kiswahili<br>
+        <input type="checkbox" name="Ki[]" id="" value="English">English<br>
+        <input type="checkbox" name="Ki[]" id="" value="French">French<br>
+        <label for="level">Level</label><br><br>
+        <select name="level" id="levels" value="year1 ">
+
+            <optgroup label="Year One">
+                <option value="a1">Year 1A</option>
+                <option value="b1">Year 1B</option>
+                <option value="c1">Year 1C</option>
+            </optgroup>
+            <optgroup label="Year Two" > 
+                <option value="a2">Year 2A</option>
+                <option value="b2">Year 2B</option>
+                <option value="c2">Year 2C</option>
+                <option value="d2">Year 2D</option>
+            </optgroup>
+            <optgroup label="Year Three"> 
+                <option value="a3">Year 3A</option>
+                <option value="b3">Year 3B</option>
+                <option value="c3">Year 3C</option>
+                <option value="d3">Year 3D</option>
+            </optgroup>
+        </select><br><br>
+        <label for="password">Password</label><br>
+        <input type="password" name="password" id=""><br>
+        Volume:<input type="range" name="volume" id=""><br><br>
+        <label for="Request">Comment</label><br>
+        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="comment..." style="resize: none;"></textarea><br><br>
+        <label for="dates">DOB</label>
+        <input type="date" name="DOB" id="TIMES"><br><br>
+        <input type="submit" value="Submit" style="background-color: #5e5eff;border: none;border-radius: 5px;">
+        </fieldset>
+
+    </form>
+</body>
+</html>
